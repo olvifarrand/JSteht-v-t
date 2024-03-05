@@ -15,17 +15,22 @@ kellonaika = hour + ':' + minute + ':' + second;
 document.getElementById("aika").innerHTML = kellonaika;
 
 
-// Teht 2, 
+// Teht 2, Guessing game
+let button = document.getElementById('button');
+let vastaus = document.getElementById('vastaus');
 
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max +1);
-}
-  
-console.log(getRandomInt(10));
+  button.onclick = function randomFunc() {
+    let input = document.getElementById('numero').value;
+    var randomnum = Math.floor(Math.random() * 10 +1);
+
+    if (input == randomnum) {
+        vastaus.innerHTML = "Oikein! :3"
+    } else {
+        vastaus.innerHTML = "Väärin! >:("
+    }
+  }
 
 
-/* if (a === true) {
-
-} else {
-
-} */
+// Teht 3, Kerto ja jakolasku
+let button = document.getElementById('kertonappi');
+let button = document.getElementById('jakonappi');
