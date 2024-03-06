@@ -32,5 +32,9 @@ let vastaus = document.getElementById('vastaus');
 
 
 // Teht 3, Kerto ja jakolasku
-let button = document.getElementById('kertonappi');
-let button = document.getElementById('jakonappi');
+let kertobutton = document.getElementById('kertonappi');
+let jakobutton = document.getElementById('jakonappi');
+
+let numero1 = document.getElementById('ekaNum')
+let numero2 = document.getElementById('tokaNum')
+
