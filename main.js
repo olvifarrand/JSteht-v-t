@@ -89,7 +89,14 @@ sameButn.onClick = function checkNumbrs() {
 let URLsplicer = document.getElementById('splitURL');
 
 URLsplicer.onCLick = function hajotaURL(url_) {
-  var data = url_.split("://")
+  var data = url_.split("://");
+  var domain = url_.split(".com");
+  var address = url_.split("/");
+
+  return [data, domain, address];
+
+
+  /* var data = url_.split("://")
   var protocol = data[0];
   data = data[1].split(".com");
   var domain = data[0];
@@ -99,7 +106,7 @@ URLsplicer.onCLick = function hajotaURL(url_) {
     return [protocol, domain, data[1]]
   }
 
-  return[protocol, domain]
+  return[protocol, domain] */
 }
 
 var url_ = "https://www.w3resource.com/javascript-exercises/"
