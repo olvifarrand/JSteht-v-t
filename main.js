@@ -1,4 +1,5 @@
-// Teht 1, Päivämäärä
+// Teht 1,
+// Päivämäärä
 const d = new Date();
 document.getElementById("date").innerHTML = d.toDateString();
 
@@ -15,7 +16,8 @@ kellonaika = hour + ':' + minute + ':' + second;
 document.getElementById("aika").innerHTML = kellonaika;
 
 
-// Teht 2, Guessing game
+// Teht 2, 
+// Guessing game
 let guessButton = document.getElementById('guessButton');
 let vastaus = document.getElementById('vastaus');
 
@@ -31,7 +33,8 @@ let vastaus = document.getElementById('vastaus');
   }
 
 
-// Teht 3, Kerto ja jakolasku
+// Teht 3, 
+// Multiply and divide
 let kertobutton = document.getElementById('kertonappi');
 let jakobutton = document.getElementById('jakonappi');
 
@@ -64,3 +67,44 @@ let FtoC = document.getElementById('FtoC');
   }
 
 
+// Teht 5,
+// Same numbers
+let sameButn = document.getElementById('checkSameButn');
+let checkIfSame = document.getElementById("onkoSamat")
+
+sameButn.onClick = function checkNumbrs() {
+  let numbrss = document.getElementById('numberot').value;    
+  tarquista =  numbrss.split('').every(char => char === numbrss[0]);
+
+  if (tarquista == true) {
+    checkIfSame.innerHTML = 'true'
+  } else {
+    checkIfSame.innerHTML = 'false'
+  }
+}
+
+
+// Teht 6,
+// URL splicing
+let URLsplicer = document.getElementById('splitURL');
+
+URLsplicer.onCLick = function hajotaURL(url_) {
+  var data = url_.split("://")
+  var protocol = data[0];
+  data = data[1].split(".com");
+  var domain = data[0];
+  data = data[1].split("/");
+
+  if(data[1]){
+    return [protocol, domain, data[1]]
+  }
+
+  return[protocol, domain]
+}
+
+var url_ = "https://www.w3resource.com/javascript-exercises/"
+
+
+
+// https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-144.php
+// https://stackoverflow.com/questions/22364961/parsing-a-url-as-a-string-and-splicing-each-sub-page-into-an-array
