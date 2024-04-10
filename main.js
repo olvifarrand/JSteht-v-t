@@ -86,32 +86,24 @@ sameButn.onClick = function checkNumbrs() {
 
 // Teht 6,
 // URL splicing
-let URLsplicer = document.getElementById('splitURL');
+let spliceButton = document.getElementById('splice');
+let bigUrl = document.getElementById('url_');
+let Taulukko = document.getElementById('taulukko');
 
-URLsplicer.onCLick = function hajotaURL(url_) {
-  var data = url_.split("://");
-  var domain = url_.split(".com");
-  var address = url_.split("/");
+spliceButton.onclick = function hajotaURL() {
+    let numbumb = bigUrl.value;
+    console.log("Original address: " + numbumb);
 
-  return [data, domain, address];
+    let protocol = numbumb.split("://")[0];
+    let domain = numbumb.split("://")[1].split("/")[0];
+    let path = numbumb.split(domain)[1];
 
+    let pathSegments = path.split("/").filter(segment => segment !== '');
 
-  /* var data = url_.split("://")
-  var protocol = data[0];
-  data = data[1].split(".com");
-  var domain = data[0];
-  data = data[1].split("/");
+    let urlArray = [protocol, domain, ...pathSegments];
 
-  if(data[1]){
-    return [protocol, domain, data[1]]
-  }
-
-  return[protocol, domain] */
-}
-
-var url_ = "https://www.w3resource.com/javascript-exercises/"
-
-
+    Taulukko.innerHTML = urlArray.join(", ");
+};
 
 // https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-144.php
 // https://stackoverflow.com/questions/22364961/parsing-a-url-as-a-string-and-splicing-each-sub-page-into-an-array
