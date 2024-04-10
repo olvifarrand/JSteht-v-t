@@ -123,3 +123,6 @@ spliceButton.onclick = function hajotaURL() {
 
 
 // Teht 7,
+
+//https://stackoverflow.com/questions/71789546/how-to-change-places-in-an-array
+//https://www.w3schools.com/js/js_string_methods.asp
