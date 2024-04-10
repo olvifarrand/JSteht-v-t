@@ -69,7 +69,8 @@ let FtoC = document.getElementById('FtoC');
 
 // Teht 5,
 // Same numbers
-let sameButn = document.getElementById('checkSameButn');
+// My code vvvvvv (mikä ei jostain syystä toimi, vaikka on sama ku aadan >:[)
+/*let sameButn = document.getElementById('checkSameButn');
 let checkIfSame = document.getElementById("onkoSamat")
 
 sameButn.onClick = function checkNumbrs() {
@@ -81,8 +82,20 @@ sameButn.onClick = function checkNumbrs() {
   } else {
     checkIfSame.innerHTML = 'false'
   }
-}
+}*/
+// Aadan koodi, mikä toimii >:(
+let TarkistaButton = document.getElementById('Tarkista');
+let onkoV = document.getElementById('onko');
 
+TarkistaButton.onclick = function allEqual() {
+  let luvut = document.getElementById('luku').value;
+  tarkista = luvut.split('').every(char => char === luvut[0]);
+  if (tarkista == true) {
+    onkoV.innerHTML = 'All numbers are the same! :)'
+  } else {
+    onkoV.innerHTML = 'All numbers arent the same. :('
+  }
+}
 
 // Teht 6,
 // URL splicing
@@ -91,6 +104,7 @@ let bigUrl = document.getElementById('url_');
 let Taulukko = document.getElementById('taulukko');
 
 spliceButton.onclick = function hajotaURL() {
+
     let numbumb = bigUrl.value;
     console.log("Original address: " + numbumb);
 
@@ -104,6 +118,8 @@ spliceButton.onclick = function hajotaURL() {
 
     Taulukko.innerHTML = urlArray.join(", ");
 };
-
 // https://www.w3resource.com/javascript-exercises/javascript-basic-exercise-144.php
 // https://stackoverflow.com/questions/22364961/parsing-a-url-as-a-string-and-splicing-each-sub-page-into-an-array
+
+
+// Teht 7,
