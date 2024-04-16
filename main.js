@@ -69,11 +69,10 @@ let FtoC = document.getElementById('FtoC');
 
 // Teht 5,
 // Same numbers
-// My code vvvvvv (mikä ei jostain syystä toimi, vaikka on sama ku aadan >:[)
-/*let sameButn = document.getElementById('checkSameButn');
+let sameButn = document.getElementById('checkSameButn');
 let checkIfSame = document.getElementById("onkoSamat")
 
-sameButn.onClick = function checkNumbrs() {
+sameButn.onclick = function checkNumbrs() {
   let numbrss = document.getElementById('numberot').value;    
   tarquista =  numbrss.split('').every(char => char === numbrss[0]);
 
@@ -82,24 +81,11 @@ sameButn.onClick = function checkNumbrs() {
   } else {
     checkIfSame.innerHTML = 'false'
   }
-}*/
-// Aadan koodi, mikä toimii >:(
-let TarkistaButton = document.getElementById('Tarkista');
-let onkoV = document.getElementById('onko');
-
-TarkistaButton.onclick = function allEqual() {
-  let luvut = document.getElementById('luku').value;
-  tarkista = luvut.split('').every(char => char === luvut[0]);
-  if (tarkista == true) {
-    onkoV.innerHTML = 'All numbers are the same! :)'
-  } else {
-    onkoV.innerHTML = 'All numbers arent the same. :('
-  }
 }
 
 // Teht 6,
 // URL splicing
-let spliceButton = document.getElementById('splice');
+let spliceButton = document.getElementById('spliceB');
 let bigUrl = document.getElementById('url_');
 let Taulukko = document.getElementById('taulukko');
 
@@ -123,6 +109,12 @@ spliceButton.onclick = function hajotaURL() {
 
 
 // Teht 7,
+let numbrsArray = document.getElementById('nubrs');
+let swapButton = document.getElementById('swapB');
 
-//https://stackoverflow.com/questions/71789546/how-to-change-places-in-an-array
-//https://www.w3schools.com/js/js_string_methods.asp
+swapButton.onclick = function swapNumbers() {
+  
+}
+
+// https://stackoverflow.com/questions/71789546/how-to-change-places-in-an-array
+// https://www.w3schools.com/js/js_string_methods.asp
