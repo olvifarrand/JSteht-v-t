@@ -112,10 +112,15 @@ spliceButton.onclick = function hajotaURL() {
 let numbrsArray = document.getElementById('nubrs');
 let swapButton = document.getElementById('swapB');
 
-swapButton.onclick = function swapNumbers() {
-  
-}
+swapButton.onclick = function swapNumbs() {
+  const swapNumbs = numbrsArray;
+  [swapNumbs[0], swapNumbs[1] = swapNumbs[1], swapNumbs[0]];
+console.log(numbrsArray);
+};
+
 
 // https://stackoverflow.com/questions/71789546/how-to-change-places-in-an-array
 // https://www.w3schools.com/js/js_string_methods.asp
 // https://www.freecodecamp.org/news/swap-two-array-elements-in-javascript/
+
+// Teht 8,
