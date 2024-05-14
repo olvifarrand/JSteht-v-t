@@ -109,8 +109,8 @@ spliceButton.onclick = function hajotaURL() {
 
 
 // Teht 7,
-let numbrsArray = document.getElementById('nubrs');
 let swapButton = document.getElementById('swapB');
+let swapped = document.getElementById('SwapD');
 
 swapButton.onclick = function swapNumbs() {
   const swapNumbs = numbrsArray;
